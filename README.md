@@ -1,193 +1,207 @@
-Medico AI 💊
-Your Health, Your Language, Your Care.
-Medico AI is a mobile-first, browser-based medicine reminder prototype designed to help people—especially senior citizens—follow the medicine schedule and instructions they enter from their own prescription. It supports spoken reminders in English and Hindi and, with the patient's consent, can prepare a message for a caregiver when reminders go unanswered.
-Important safety notice: Medico AI is not a medical device and does not replace advice from a doctor or pharmacist. It repeats information entered by the user. It does not diagnose conditions, prescribe medicines, recommend or change doses, verify prescriptions, identify pills, or determine whether a medicine is appropriate. If a prescription is unclear or a dose is missed, contact a doctor or pharmacist for guidance.
+# Medico AI 💊
 
- Features
-Area	Status / details
-Medicine schedule	Add medicines with start/end dates, times, doctor details, and instructions entered by the user
-English and Hindi interface	Switch between English and हिन्दी
-Spoken reminders	Uses the browser Web Speech API with en-IN and hi-IN; voice availability and quality depend on the device and browser
-Dose status	Mark a reminder as taken, ask to be reminded later, or request help
-Activity history	Review timestamped reminder-related events
-Follow-up reminders	Configurable grace periods and one follow-up reminder
-Caregiver support	Optional caregiver details and consent-based escalation; consent can be revoked
-Caregiver message	Opens a pre-filled SMS for the user to review and send; the app does not automatically send it or confirm delivery
-Quiet hours	Configurable quiet hours suppress reminder and escalation activity
-Emergency shortcut	Configurable emergency number and a tel: call link; in India, the emergency number is 112
-Find nearby care	Opens Google Maps or OpenStreetMap searches for nearby care; provider information is not verified or stored by the app
-Data export and deletion	Export app data as JSON or delete this app's data from the current browser
-Responsive interface	Mobile-first layout with light/dark appearance support
+**Your Health, Your Language, Your Care.**
 
+Medico AI is a mobile-first medicine reminder web application designed to help people, especially senior citizens, follow their prescribed medicine schedules. It provides English and Hindi voice reminders and optional, consent-based caregiver messaging when reminders go unanswered.
 
-How reminder escalation works
-1. At the scheduled time, the app displays and speaks a reminder.
-2. If there is no response after the grace period (5 minutes by default), the app issues one follow-up.
-3. If there is still no response after another grace period, and the patient has consented and saved a caregiver number, the app opens a pre-filled SMS for the patient to send.
-4. The activity log records the message as prepared, not delivered. The reminder may be marked missed.
-5. A missed reminder is not treated as an emergency.
-Each stage runs at most once per medicine per day. Quiet hours suppress reminder and escalation activity.
-Reminder limitation: Reminders run only while the page is open. Closing the page or browser may prevent them from firing on time. Reliable background reminders would require a native app, push notifications, or a server-side service.
+> **Medical Disclaimer:** Medico AI is a reminder tool, not a medical device. It does not diagnose conditions, prescribe medicines, recommend or change doses, verify prescriptions, or identify pills. Always consult a doctor or pharmacist for medical advice.
 
+##  Problem Statement
 
-Technology stack
+People managing regular medication schedules may forget reminders or find text-based applications difficult to use. Language barriers can make reminders less accessible, while unanswered reminders may leave caregivers unaware that a user has not responded.
 
-- HTML5 — application structure
-- CSS — responsive styling, design system, and theme support
-- Vanilla JavaScript — scheduling, escalation, and user interface logic
-- Browser localStorage — local persistence
-- Web Speech API (speechSynthesis) — spoken reminders in supported languages
-- sms: links — user-initiated caregiver messages
-- Google Maps and OpenStreetMap links — nearby-care search shortcuts
-- Node.js built-in test runner (node:test) — logic tests, requiring Node.js 18 or later
-The current prototype has no build step, external package dependencies, server, database, account system, cloud synchronization, or AI/LLM integration. “AI” is part of the project name; the current prototype does not integrate an AI model.
+##  Our Solution
 
+Medico AI provides a simple, mobile-friendly interface with spoken reminders in English and Hindi, medicine schedule management, reminder status tracking, and optional caregiver messaging. It focuses on accessibility, privacy, consent, and user control.
 
-Project structure
+##  Features
 
+- **Medicine scheduling:** Enter medicine names, prescribed instructions, times, start dates, and end dates.
+- **English and Hindi voice reminders:** Uses the browser's Web Speech API with `en-IN` and `hi-IN` language settings.
+- **Reminder actions:** Mark a reminder as taken, request a later reminder, or select “I need help.”
+- **Reminder history:** View timestamped reminder-related activities.
+- **Follow-up reminders:** Provides one follow-up after the configured grace period.
+- **Caregiver support:** Optionally save a caregiver number and provide or revoke consent.
+- **Manual caregiver SMS:** Prepares a message that the user can review and send.
+- **Quiet hours:** Suppresses reminder and escalation activity during configured quiet hours.
+- **Emergency shortcut:** Provides a configurable phone link. India's emergency number is **112**.
+- **Find nearby care:** Opens Google Maps and OpenStreetMap searches for healthcare services.
+- **Data export and deletion:** Export app data as JSON or delete the app's locally stored data.
+- **Responsive design:** Mobile-first layout with light and dark appearance support.
+
+##  How Reminder Escalation Works
+
+1. At the scheduled time, the app displays and speaks the reminder.
+2. If there is no response after the grace period (5 minutes by default), one follow-up reminder is issued.
+3. If there is still no response after another grace period, the app can prepare an SMS for a saved caregiver, provided the user has consented.
+4. The user must review and send the SMS manually.
+5. The activity log records the message as **prepared**, not delivered.
+
+Each escalation stage runs at most once per medicine per day. Quiet hours suppress reminder and escalation activity.
+
+**Important:** Reminders only run while the app page is open. A missed reminder is not automatically an emergency.
+
+##  Technology Stack
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Browser `localStorage`
+- Web Speech API (`speechSynthesis`)
+- `sms:` links for user-initiated caregiver messages
+- Google Maps and OpenStreetMap search links
+- Node.js built-in test runner (`node:test`)
+
+The current prototype has no backend, database, user accounts, cloud synchronization, external package dependencies, or AI/LLM integration. “AI” is part of the project name; the current prototype does not use an AI model.
+
+##  Project Structure
+
+```text
 medico-ai/
-├── index.html          # Application shell
+├── index.html
 ├── css/
-│   └── styles.css      # Design system, responsive layout, dark mode
+│   └── styles.css
 ├── js/
-│   ├── logic.js        # Scheduling and escalation logic
-│   └── app.js          # UI, storage, speech, reminder loop
+│   ├── logic.js
+│   └── app.js
 ├── tests/
-│   └── logic.test.js   # Unit tests
+│   └── logic.test.js
 └── README.md
+```
 
+- `index.html` — Application structure.
+- `css/styles.css` — Responsive styling, design system, and theme support.
+- `js/logic.js` — Scheduling and escalation logic.
+- `js/app.js` — User interface, local storage, speech, and reminder loop.
+- `tests/logic.test.js` — Automated logic tests.
 
-Run locally
+##  Getting Started
 
-No package installation or build step is required. Because the app uses JavaScript ES modules, serve it over HTTP instead of opening index.html directly from disk.
-Prerequisites
-- A modern browser
-- Python 3 to run the local static server
-- Node.js 18 or later to run the tests
-Start the website
-1. Clone your repository and enter its folder:
-   git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
-   cd YOUR-REPOSITORY
-2. Start a local server:
-   python3 -m http.server 8080
-3. Open http://localhost:8080 in your browser.
-Stop the server with Ctrl+C in the terminal.
-Run tests
-From the project root, run:
+### Prerequisites
+
+- A modern web browser.
+- Python 3 to run the local web server.
+- Node.js 18 or later to run tests.
+
+### Run Locally
+
+**1. Clone the repository**
+
+```bash
+git clone https://github.com/MEDICO-2/MEDICO.git
+cd MEDICO
+```
+
+**2. Start a local server**
+
+```bash
+python3 -m http.server 8080
+```
+
+**3. Open the application**
+
+Visit [http://localhost:8080](http://localhost:8080) in your browser.
+
+Because the application uses JavaScript ES modules, run it through an HTTP server rather than opening `index.html` directly from your file system.
+
+### Run Tests
+
+From the project root:
+
+```bash
 node --test
-The tests use Node.js's built-in node:test runner and do not require installing packages.
+```
 
+Tests require Node.js 18 or later and use the built-in Node.js test runner.
 
-Deploy to GitHub Pages
+##  Deployment
 
-This is a static website, so GitHub Pages can host it without a separate backend.
-1. Push the project files to a GitHub repository.
-2. Open the repository on GitHub.
-3. Go to Settings → Pages.
-4. Under Build and deployment, select Deploy from a branch.
-5. Select the main branch and the / (root) folder, then save.
-6. Wait for GitHub Pages to finish publishing and open the URL shown in the Pages settings.
-The published URL will typically look like:
-https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/
-The URL above is an example format; use the actual URL shown by GitHub Pages. If the repository is configured differently, adjust the branch or folder selection to match where index.html is stored.
+Medico AI is a static website and can be hosted using GitHub Pages.
 
+1. Push your project files to your GitHub repository.
+2. Open the repository's **Settings**.
+3. Select **Pages**.
+4. Under **Build and deployment**, choose **Deploy from a branch**.
+5. Select the `main` branch and the `/ (root)` directory.
+6. Click **Save** and wait for deployment.
+7. Open the published URL displayed in the Pages settings.
 
- Privacy and consent
- 
-- Medicine schedules, settings, caregiver details, and activity history are stored in localStorage in the browser being used.
-- There is no account system, server-side storage, or automatic cross-device synchronization.
+The URL will typically follow this format:
+
+`https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/`
+
+Replace the placeholders with the actual GitHub username and repository name.
+
+##  Privacy and Consent
+
+- Medicine schedules, caregiver details, settings, and activity history are stored in the current browser's `localStorage`.
+- The application does not provide accounts, server-side storage, or automatic cross-device synchronization.
 - Anyone with access to the same browser profile may be able to access locally stored information.
-- Exported JSON files may contain sensitive health information; store and share them carefully.
-- Revoking caregiver consent disables the app's caregiver escalation flow.
-- The caregiver feature prepares an SMS link; it does not automatically send messages or confirm delivery.
-- Clearing browser data may remove the information saved by this app.
+- Exported JSON files may contain sensitive health information. Store and share them carefully.
+- Revoking caregiver consent disables the caregiver escalation flow.
+- Caregiver SMS messages are prepared for manual sending; the application does not automatically send or confirm delivery.
+- Clearing browser data may remove saved application information.
+
+##  Safety and Limitations
+
+- Enter medicine details exactly as written on the prescription.
+- Medico AI does not calculate doses, identify pills, diagnose conditions, or verify prescriptions.
+- Contact a doctor or pharmacist if a prescription or missed dose is unclear.
+- Reminders are not guaranteed to run when the page is closed or the browser is suspended.
+- Voice availability and quality depend on the browser, operating system, and installed language voices.
+- Nearby-care links are search shortcuts; the app does not verify providers, opening hours, or availability.
+- A prepared caregiver message is not a sent or delivered alert.
+- In a genuine emergency in India, call **112** directly. Do not wait for the application.
+
+##  Future Improvements
+
+Potential future improvements include:
+
+- Progressive Web App (PWA) support and more reliable notifications.
+- Additional Indian languages.
+- Improved accessibility, larger text, and simpler onboarding.
+- Expanded automated testing.
+- Optional secure authentication and cross-device synchronization.
+- Server-side caregiver notifications with delivery-status reporting.
+- Appointments and a healthcare directory with a documented verification process.
+
+These are future possibilities, not features currently implemented in this prototype.
 
 
- Safety and limitations
- 
-- Enter medicine names, times, and instructions exactly as shown on a clinician-provided prescription.
-- Medico AI does not calculate doses, verify prescriptions, identify pills, diagnose conditions, or advise whether a medicine is suitable.
-- Do not rely on the app to decide what to do about a missed dose. Contact a doctor or pharmacist for advice.
-- Reminders are not guaranteed to run in the background and may not fire if the page is closed, suspended, or the device is unavailable.
-- Nearby-care links are search shortcuts. The app does not verify providers, opening hours, services, or availability.
-- A prepared caregiver SMS is not a sent or delivered alert.
-- A missed reminder is not automatically an emergency.
-- In a genuine emergency in India, call 112 directly. Do not wait for this app.
+## Team Contributions
 
- 
-Roadmap
+**1. Divyansh Raturi – Project Lead & Planning**
+- Identified the problem and defined the project objectives.
+- Planned the project workflow and coordinated team activities.
+- Ensured the solution addresses medicine adherence for senior citizens.
 
-Potential future improvements—not features currently provided by this prototype—include:
-- Progressive Web App (PWA) support and more reliable notifications
-- Additional Indian languages by extending the language dictionary in js/app.js
-- Accessibility improvements, including larger text and improved onboarding
-- Expanded automated tests for scheduling, data export, and consent flows
-- Optional secure authentication and cross-device synchronization using a backend such as Supabase, with strict access controls
-- Server-side caregiver SMS or calling through a provider that reports delivery status
-- Appointments and a healthcare-provider directory with a documented verification process
-Any future caregiver notification service should clearly distinguish between a message being prepared, sent, and confirmed delivered.
+**2. Anuj Somani – Frontend Development**
+- Developed the user interface using HTML, CSS, and JavaScript.
+- Designed a simple, accessible, mobile-friendly interface.
+- Improved usability for elderly users.
 
+**3. Shlok Agrahari – Voice Reminder System**
+- Implemented voice-based medicine reminders.
+- Worked on English and Hindi text-to-speech functionality.
+- Tested browser voice support and reminder playback.
 
-#  Problem Statement
+**4. Sumit – Caregiver Alert & Logic**
+- Developed the logic for tracking unanswered reminders.
+- Worked on preparing caregiver notifications with the patient's consent.
+- Helped design the medicine reminder workflow.
 
-Many people, especially senior citizens and individuals managing multiple medicines, may find it difficult to remember their prescribed medicine schedules. Language barriers, missed reminders, and limited caregiver communication can make following a routine more challenging.
+**5. Abhinav Bochare – Testing, Documentation & Deployment**
+- Tested the application's main features and fixed reported issues.
+- Prepared project documentation and the GitHub README.
+- Worked on publishing the website and preparing the hackathon demonstration.
 
-Existing reminder tools may not always provide accessible Hindi voice reminders, consent-based caregiver support, or a simple interface for users who are less comfortable with technology.
+### Team Collaboration
+All five members contributed to planning, reviewing the solution, discussing improvements, and preparing the final hackathon presentation.
 
-##  Our Solution: Medico AI
+##  Contributing
 
-Medico AI is a mobile-first medicine reminder web application that helps users follow the schedule and instructions they enter from their prescriptions. It combines English and Hindi voice reminders with simple reminder-status controls and optional caregiver messaging.
+Issues and pull requests are welcome. Please prioritize accessibility, privacy, and safe handling of health-related information. Do not add features that invent or alter medical instructions or claim message delivery without confirmation.
 
-The application focuses on accessibility, user consent, privacy, and clear communication without making medical decisions.
+##  License
 
-##  Problem-Solving Approach
-
-### 1. Language barriers
-**Problem:** Some users may find text-only reminders difficult to understand or notice.
-
-**Solution:** Provide spoken reminders in English and Hindi using the browser's Web Speech API. Voice availability and quality depend on the user's device and browser.
-
-### 2. Forgotten medicine schedules
-**Problem:** Users may lose track of scheduled reminders during their daily routines.
-
-**Solution:** Allow users to enter medicine schedules, times, start and end dates, and prescription instructions, then receive reminders while the app page remains open.
-
-### 3. Unanswered reminders
-**Problem:** A reminder may go unanswered, leaving the user without an easy next step.
-
-**Solution:** Provide reminder controls such as **Taken**, **Remind me later**, and **I need help**, followed by a configurable follow-up reminder.
-
-### 4. Caregiver communication
-**Problem:** A caregiver may need to be informed when a user does not respond to reminders.
-
-**Solution:** With the user's consent and a saved caregiver number, prepare an SMS after the configured reminder stages. The user reviews and sends the message manually. The app does not claim that the message was delivered.
-
-### 5. Privacy and user control
-**Problem:** Health-related information requires careful handling.
-
-**Solution:** Store app data locally in the browser, provide data export and deletion controls, and allow users to revoke caregiver consent. The prototype does not use a cloud database or account system.
-
-### 6. Access to nearby care
-**Problem:** Users may need help locating nearby healthcare services.
-
-**Solution:** Provide shortcuts to Google Maps and OpenStreetMap searches for hospitals, clinics, pharmacies, diagnostic laboratories, and ambulance services. Search results are not independently verified by Medico AI.
-
-##  Expected Impact
-
-- Make medicine reminders easier to understand through voice support.
-- Improve accessibility for users who prefer Hindi or English.
-- Help users keep track of reminder statuses and history.
-- Make consent-based caregiver communication easier to initiate.
-- Encourage privacy-conscious handling of locally stored information.
-
-##  Scope and Limitations
-
-Medico AI is a reminder prototype, not a medical device. It does not diagnose, prescribe, calculate or change doses, identify pills, or verify prescriptions. Reminders are not guaranteed to run when the page is closed. Caregiver messages require the user to send them manually, and a missed reminder is not automatically an emergency.
-
-The application supports reminder management and communication; it does not guarantee medication adherence or improved health outcomes.
-
-
- Contributing
-Issues and pull requests are welcome. When proposing changes, prioritize accessibility, privacy, and safe handling of health-related information. Do not add features that invent, verify, or alter medical dosage instructions, or claim that an alert was delivered without provider confirmation.
-📄 License
-This project has not specified a license yet. Add a LICENSE file before distributing it as open-source software under a particular license.
+No license has been specified yet. Add a `LICENSE` file before distributing this project under a specific open-source license..
