@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!-- saved from url=(0102)file:///Users/anujsomani/Downloads/Medico%20-%20Medicine%20reminders%20in%20your%20language%20(1).html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Medico - Medicine reminders in your language</title>
+<style>
+:root{--bg:#f5f9fc;--sf:#fff;--fg:#0e2233;--mut:#586a7a;--bd:#dce7f0;--pri:#0b63c5;--pri2:#0e9488;--red:#c62828;--amb:#a35f00;--grn:#1b7a3a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light dark}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b141c;--sf:#121f2a;--fg:#e8f1f8;--mut:#9db0c0;--bd:#25404f;--pri:#5aa8ff;--pri2:#35d0c0;--red:#ff7b7b;--amb:#ffb84d;--grn:#58d68d}}
+:root[data-theme="dark"]{--bg:#0b141c;--sf:#121f2a;--fg:#e8f1f8;--mut:#9db0c0;--bd:#25404f;--pri:#5aa8ff;--pri2:#35d0c0;--red:#ff7b7b;--amb:#ffb84d;--grn:#58d68d}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans Devanagari",sans-serif}
+h1,h2,h3,p{margin:0}a{color:var(--pri)}.w{max-width:1040px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--sf) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;height:64px}
+.brand{display:flex;gap:10px;align-items:center;font-weight:800;font-size:19px;color:var(--fg);text-decoration:none}
+.logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--pri),var(--pri2));display:grid;place-items:center;color:#fff;font-size:18px}
+.logo svg{width:22px;height:22px}.links{display:flex;gap:18px;align-items:center}.links a{color:var(--mut);text-decoration:none;font-weight:600;font-size:15px}
+button,.btn{font:inherit;min-height:44px;padding:0 18px;border-radius:12px;border:1.5px solid var(--bd);background:var(--sf);color:var(--fg);font-weight:600;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
+.pri{background:linear-gradient(135deg,var(--pri),var(--pri2));border-color:transparent;color:#fff}.dg{background:var(--red);border-color:var(--red);color:#fff}
+:focus-visible{outline:3px solid var(--amb);outline-offset:2px}
+.hero{padding:64px 0 48px;display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.hero h1{font-size:clamp(32px,5vw,50px);line-height:1.1;letter-spacing:-1px}.hero h1 span{background:linear-gradient(135deg,var(--pri),var(--pri2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mut);font-size:18px;margin:16px 0 24px}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.phone{background:var(--sf);border:1px solid var(--bd);border-radius:26px;padding:22px;box-shadow:0 20px 50px rgba(11,99,197,.15)}
+.phone .t{color:var(--mut);font-size:13px}.phone .n{font-size:24px;font-weight:800;margin:4px 0 12px}
+.bub{border-radius:14px;padding:10px 14px;margin:8px 0;font-size:15px;background:var(--bg);border:1px solid var(--bd)}
+section{padding:48px 0}h2.s{font-size:30px;letter-spacing:-.5px;margin-bottom:8px}.sub{color:var(--mut);margin-bottom:26px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.card{background:var(--sf);border:1px solid var(--bd);border-radius:18px;padding:22px;box-shadow:0 1px 2px rgba(15,34,51,.05)}
+.card h3{font-size:18px;margin:8px 0 6px}.card p{color:var(--mut);font-size:15px}.ic{font-size:26px}
+.num{width:34px;height:34px;border-radius:50%;background:var(--pri);color:#fff;display:grid;place-items:center;font-weight:800}
+.band{background:var(--sf);border-block:1px solid var(--bd)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}.tabs button[aria-selected=true]{background:var(--pri);color:#fff;border-color:var(--pri)}
+label{display:block;font-weight:600;font-size:14px;margin:12px 0 4px}
+input,select{width:100%;font:inherit;color:var(--fg);background:var(--bg);border:1.5px solid var(--bd);border-radius:12px;padding:10px 12px}
+input[type=checkbox]{width:20px;height:20px;vertical-align:middle;margin-right:8px}
+.form{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0 16px}.full{grid-column:1/-1}
+.item{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--bd);flex-wrap:wrap}.item:last-child{border:0}
+.pill{font-size:12px;font-weight:700;padding:2px 10px;border-radius:99px;border:1px solid currentColor}
+.ok{color:var(--grn)}.bad{color:var(--red)}.wn{color:var(--amb)}.mut{color:var(--mut);font-size:14px}
+.note{border-left:4px solid var(--amb);background:var(--bg);padding:10px 14px;border-radius:10px;font-size:14px;margin-top:14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}.stat{text-align:center;background:var(--bg);border-radius:14px;padding:12px}.stat b{font-size:30px;display:block}
+.panel[hidden]{display:none}
+footer{padding:32px 0 40px;color:var(--mut);font-size:14px;border-top:1px solid var(--bd)}
+body{background:radial-gradient(900px 420px at 85% -60px,color-mix(in srgb,var(--pri2) 20%,transparent),transparent),radial-gradient(700px 380px at 0% 0%,color-mix(in srgb,var(--pri) 12%,transparent),transparent),var(--bg)}
+.credit{margin-top:16px;padding-top:16px;border-top:1px solid var(--bd);font-weight:700;color:var(--fg);font-size:15px}
+.trust{padding:8px 0 40px}.tr{text-align:center;background:var(--sf);border:1px solid var(--bd);border-radius:16px;padding:16px}.tr b{display:block;font-size:20px;background:linear-gradient(135deg,var(--pri),var(--pri2));-webkit-background-clip:text;background-clip:text;color:transparent}.tr span{color:var(--mut);font-size:14px}
+details{background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:14px 18px;margin-bottom:10px}summary{font-weight:700;cursor:pointer}details p{color:var(--mut);margin-top:8px}
+.cta{margin:8px 0 48px;border-radius:24px;padding:40px 24px;text-align:center;color:#fff;background:linear-gradient(135deg,var(--pri),var(--pri2))}.cta h2{font-size:30px;letter-spacing:-.5px}.cta p{opacity:.9;margin:8px 0 20px}.cta .btn{background:#fff;color:#0b63c5;border-color:#fff}
+.card{transition:transform .2s,box-shadow .2s}.card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(11,99,197,.12)}@media(prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+@media(max-width:760px){.links a.btn{display:inline-flex}.bar{height:60px}.cta h2{font-size:24px}}
+.sos{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:15;width:56px;height:56px;border-radius:50%;background:var(--red);color:#fff;font-weight:800;display:grid;place-items:center;text-decoration:none;box-shadow:0 8px 24px rgba(198,40,40,.45)}
+#modal{position:fixed;inset:0;background:rgba(5,15,25,.65);display:none;align-items:center;justify-content:center;padding:16px;z-index:30}#modal.show{display:flex}
+.box{background:var(--sf);border-radius:24px;padding:24px;max-width:460px;width:100%;text-align:center}.box .big{font-size:26px;font-weight:800;margin:6px 0}.box button,.box .btn{width:100%;margin-top:10px;min-height:54px;font-size:18px}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:36px}.links a{display:none}}
+</style></head><body>
+<header><div class="w bar"><a class="brand" href="file:///Users/anujsomani/Downloads/Medico%20-%20Medicine%20reminders%20in%20your%20language%20(1).html#top" aria-label="Medico home"><span class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span>Medico</a>
+<nav class="links"><a href="file:///Users/anujsomani/Downloads/Medico%20-%20Medicine%20reminders%20in%20your%20language%20(1).html#features" data-hi="सुविधाएँ" data-en="Features">Features</a><a href="file:///Users/anujsomani/Downloads/Medico%20-%20Medicine%20reminders%20in%20your%20language%20(1).html#how" data-hi="कैसे काम करता है" data-en="How it works">How it works</a><a href="file:///Users/anujsomani/Downloads/Medico%20-%20Medicine%20reminders%20in%20your%20language%20(1).html#safety" data-hi="सुरक्षा" data-en="Safety">Safety</a>
+<select id="lang" aria-label="Language" style="width:auto"><option value="en">English</option><option value="hi">हिन्दी</option></select>
+<a class="btn pri" href="file:///Users/anujsomani/Downloads/Medico%20-%20Medicine%20reminders%20in%20your%20language%20(1).html#app" style="color:#fff" data-hi="ऐप खोलें" data-en="Open app">Open app</a></nav></div></header>
+<main id="top">
+<div class="w hero"><div>
+<h1 data-hi="आपकी सेहत, &lt;span&gt;आपकी भाषा&lt;/span&gt;, आपकी देखभाल।" data-en="Your health, &lt;span&gt;your language&lt;/span&gt;, your care.">Your health, <span>your language</span>, your care.</h1>
+<p data-hi="हिंदी और अंग्रेज़ी में आवाज़ वाले दवा रिमाइंडर, और सहमति के साथ देखभालकर्ता को सूचना।" data-en="Spoken medicine reminders in English and Hindi, with consent-based caregiver alerts when a dose is missed.">Spoken medicine reminders in English and Hindi, with consent-based caregiver alerts when a dose is missed.</p>
+<div class="row"><a class="btn pri" href="file:///Users/anujsomani/Downloads/Medico%20-%20Medicine%20reminders%20in%20your%20language%20(1).html#app" data-hi="शुरू करें" data-en="Get started">Get started</a></div></div>
+<div class="phone" aria-hidden="true"><div class="t">8:00</div><div class="n">Your medicine</div>
+<div class="bub">🔊 "Medicine reminder. Time to take your medicine."</div><div class="bub">🔊 "दवा का रिमाइंडर। दवा लेने का समय हो गया है।"</div>
+<div class="row" style="margin-top:12px"><span class="btn pri" style="flex:1">✓ Taken / ले ली</span></div></div></div>
+<div class="w grid trust"><div class="tr"><b>EN + हिन्दी</b><span data-hi="आवाज़ रिमाइंडर" data-en="Spoken reminders">Spoken reminders</span></div><div class="tr"><b data-hi="सहमति पहले" data-en="Consent first">Consent first</b><span data-hi="देखभालकर्ता अलर्ट" data-en="Caregiver alerts">Caregiver alerts</span></div><div class="tr"><b data-hi="100% निजी" data-en="100% private">100% private</b><span data-hi="डेटा सिर्फ़ आपके ब्राउज़र में" data-en="Data stays in your browser">Data stays in your browser</span></div><div class="tr"><b>112</b><span data-hi="एक टैप में SOS" data-en="One-tap SOS">One-tap SOS</span></div></div>
+<section id="features" class="band"><div class="w"><h2 class="s" data-hi="मुख्य सुविधाएँ" data-en="What Medico AI does">What Medico AI does</h2><p class="sub" data-hi="सरल, सुरक्षित और आपकी अपनी भाषा में।" data-en="Simple, safe and in the language you think in.">Simple, safe and in the language you think in.</p>
+<div class="grid">
+<div class="card"><div class="ic">🗣️</div><h3 data-hi="दो भाषाओं में आवाज़" data-en="Voice in two languages">Voice in two languages</h3><p data-hi="रिमाइंडर हिंदी, अंग्रेज़ी या दोनों में बोले जाते हैं।" data-en="Reminders are spoken in Hindi, English, or both, one after the other.">Reminders are spoken in Hindi, English, or both, one after the other.</p></div>
+<div class="card"><div class="ic">🤝</div><h3 data-hi="सहमति-आधारित अलर्ट" data-en="Consent-first caregiver alerts">Consent-first caregiver alerts</h3><p data-hi="आपकी सहमति के बिना किसी को सूचना नहीं जाती। संदेश आप खुद भेजते हैं।" data-en="Nobody is contacted without your consent. You press send yourself.">Nobody is contacted without your consent. You press send yourself.</p></div>
+<div class="card"><div class="ic">🔒</div><h3 data-hi="आपका डेटा आपके पास" data-en="Private by design">Private by design</h3><p data-hi="सारा डेटा सिर्फ़ आपके ब्राउज़र में रहता है।" data-en="Everything stays in your browser. Nothing is uploaded.">Everything stays in your browser. Nothing is uploaded.</p></div>
+<div class="card"><div class="ic">📍</div><h3 data-hi="नज़दीकी देखभाल" data-en="Find nearby care">Find nearby care</h3><p data-hi="अस्पताल, क्लिनिक और फार्मेसी मैप में खोजें।" data-en="Open hospitals, clinics and pharmacies in your map app.">Open hospitals, clinics and pharmacies in your map app.</p></div></div></div></section>
+<section id="how"><div class="w"><h2 class="s" data-hi="कैसे काम करता है" data-en="How it works">How it works</h2><p class="sub" data-hi="चार आसान चरण।" data-en="Four simple steps.">Four simple steps.</p>
+<div class="grid">
+<div class="card"><div class="num">1</div><h3 data-hi="दवा जोड़ें" data-en="Add your medicine">Add your medicine</h3><p data-hi="prescription के अनुसार नाम और समय भरें।" data-en="Enter the name and time exactly as on your prescription.">Enter the name and time exactly as on your prescription.</p></div>
+<div class="card"><div class="num">2</div><h3 data-hi="आवाज़ रिमाइंडर" data-en="Hear the reminder">Hear the reminder</h3><p data-hi="समय होने पर ऐप बोलकर याद दिलाता है।" data-en="At the scheduled time the app speaks and shows the reminder.">At the scheduled time the app speaks and shows the reminder.</p></div>
+<div class="card"><div class="num">3</div><h3 data-hi="फॉलो-अप" data-en="One follow-up">One follow-up</h3><p data-hi="जवाब न मिलने पर एक बार फिर याद दिलाया जाता है।" data-en="If you do not respond, you get a single follow-up.">If you do not respond, you get a single follow-up.</p></div>
+<div class="card"><div class="num">4</div><h3 data-hi="देखभालकर्ता को संदेश" data-en="Caregiver message">Caregiver message</h3><p data-hi="सहमति होने पर संदेश तैयार होता है; आप भेजते हैं।" data-en="With your consent, a message is prepared for you to send.">With your consent, a message is prepared for you to send.</p></div></div></div></section>
+<section id="app" class="band"><div class="w"><h2 class="s" data-hi="ऐप" data-en="Try the app">Try the app</h2><p class="sub" data-hi="रिमाइंडर तभी बोलते हैं जब यह पेज खुला हो।" data-en="Voice reminders work while this page is open in your browser.">Voice reminders work while this page is open in your browser.</p>
+<div class="tabs" role="tablist" id="tabs"><button role="tab" data-tab="meds" aria-selected="true">Medicines</button><button role="tab" data-tab="cg" aria-selected="false">Caregiver</button><button role="tab" data-tab="voice" aria-selected="false">Voice &amp; settings</button><button role="tab" data-tab="care" aria-selected="false">Find care</button><button role="tab" data-tab="log" aria-selected="false">Activity</button></div>
+<div class="card panel" id="p-meds"><form id="mf" class="form" novalidate="">
+<div><label for="mn" data-hi="दवा का नाम" data-en="Medicine name">Medicine name</label><input id="mn" maxlength="80"></div>
+<div><label for="mt" data-hi="समय" data-en="Time">Time</label><input id="mt" type="time"></div>
+<div class="full"><label for="md" data-hi="खुराक और निर्देश (prescription के अनुसार)" data-en="Dosage and instructions (as on the prescription)">Dosage and instructions (as on the prescription)</label><input id="md" maxlength="200"></div>
+<div class="full"><p class="bad" id="merr" role="alert"></p><div class="row"><button class="pri" type="submit" data-hi="दवा सहेजें" data-en="Save medicine">Save medicine</button></div></div></form>
+<div class="stats"><div class="stat"><b class="ok" id="s1">0</b><span class="mut" data-hi="ले ली" data-en="Taken">Taken</span></div><div class="stat"><b id="s2">0</b><span class="mut" data-hi="बाकी" data-en="Pending">Pending</span></div><div class="stat"><b class="bad" id="s3">0</b><span class="mut" data-hi="छूटी" data-en="Missed">Missed</span></div></div>
+<div id="medlist"><p class="mut">No medicines yet.</p></div></div>
+<div class="card panel" id="p-cg" hidden=""><p class="mut" data-hi="जवाब न मिलने पर आपके देखभालकर्ता के लिए संदेश तैयार होता है। वह आपके मैसेज ऐप में खुलता है; कुछ भी अपने आप नहीं भेजा जाता।" data-en="If you do not respond to a reminder and a follow-up, a text message is prepared for your caregiver. It opens in your messaging app; nothing is sent automatically.">If you do not respond to a reminder and a follow-up, a text message is prepared for your caregiver. It opens in your messaging app; nothing is sent automatically.</p>
+<form id="cf" class="form"><div><label for="cn" data-hi="नाम" data-en="Caregiver name">Caregiver name</label><input id="cn" maxlength="60"></div><div><label for="cp" data-hi="मोबाइल नंबर" data-en="Mobile number">Mobile number</label><input id="cp" type="tel" placeholder="+91…"></div>
+<div class="full"><label><input type="checkbox" id="cc"><span data-hi="दवा छूटने पर मेरे देखभालकर्ता को बताए जाने की मैं सहमति देता/देती हूँ।" data-en="I consent to my caregiver being told when I miss a medicine reminder.">I consent to my caregiver being told when I miss a medicine reminder.</span></label><p class="bad" id="cerr" role="alert"></p>
+<div class="row"><button class="pri" type="submit" data-hi="सहेजें" data-en="Save">Save</button><button type="button" id="rev" data-hi="सहमति रद्द करें" data-en="Revoke consent">Revoke consent</button></div></div></form></div>
+<div class="card panel" id="p-voice" hidden=""><form id="vf" class="form"><div><label for="vm" data-hi="आवाज़ की भाषा" data-en="Voice language">Voice language</label><select id="vm"><option value="both">English + हिन्दी</option><option value="en">English</option><option value="hi">हिन्दी</option></select></div>
+<div><label for="sn" data-hi="आपका नाम" data-en="Your name">Your name</label><input id="sn" maxlength="60"></div>
+<div><label for="sg" data-hi="फॉलो-अप (मिनट)" data-en="Follow-up after (minutes)">Follow-up after (minutes)</label><input id="sg" type="number" min="1" max="60"></div>
+<div><label for="ss" data-hi="बाद में याद दिलाएँ (मिनट)" data-en="Remind me later (minutes)">Remind me later (minutes)</label><input id="ss" type="number" min="1" max="120"></div>
+<div class="full"><div class="row"><button class="pri" type="submit" data-hi="सहेजें" data-en="Save">Save</button><button type="button" id="te">🔊 Test English</button><button type="button" id="th">🔊 Test Hindi</button></div><p class="mut" id="vstat" style="margin-top:10px">Both voices are available.</p></div></form>
+<div class="row" style="margin-top:14px"><button id="exp" data-hi="डेटा निर्यात" data-en="Export data">Export data</button><button class="dg" id="wipe" data-hi="सारा डेटा हटाएँ" data-en="Delete all data">Delete all data</button></div></div>
+<div class="card panel" id="p-care" hidden=""><div class="grid" id="carelist"><div><b>Hospitals</b><div class="row" style="margin-top:8px"><a class="btn pri" target="_blank" rel="noopener" href="https://www.google.com/maps/search/hospitals%20near%20me">Google Maps</a><a class="btn" target="_blank" rel="noopener" href="https://www.openstreetmap.org/search?query=hospitals">OSM</a></div></div><div><b>Clinics</b><div class="row" style="margin-top:8px"><a class="btn pri" target="_blank" rel="noopener" href="https://www.google.com/maps/search/clinics%20near%20me">Google Maps</a><a class="btn" target="_blank" rel="noopener" href="https://www.openstreetmap.org/search?query=clinics">OSM</a></div></div><div><b>Pharmacies</b><div class="row" style="margin-top:8px"><a class="btn pri" target="_blank" rel="noopener" href="https://www.google.com/maps/search/pharmacies%20near%20me">Google Maps</a><a class="btn" target="_blank" rel="noopener" href="https://www.openstreetmap.org/search?query=pharmacies">OSM</a></div></div><div><b>Diagnostic labs</b><div class="row" style="margin-top:8px"><a class="btn pri" target="_blank" rel="noopener" href="https://www.google.com/maps/search/diagnostic%20labs%20near%20me">Google Maps</a><a class="btn" target="_blank" rel="noopener" href="https://www.openstreetmap.org/search?query=diagnostic%20labs">OSM</a></div></div><div><b>Ambulance</b><div class="row" style="margin-top:8px"><a class="btn pri" target="_blank" rel="noopener" href="https://www.google.com/maps/search/ambulance%20service%20near%20me">Google Maps</a><a class="btn" target="_blank" rel="noopener" href="https://www.openstreetmap.org/search?query=ambulance%20service">OSM</a></div></div></div><p class="mut" style="margin-top:12px" data-hi="मेडिको प्रदाताओं की पुष्टि नहीं करता; जानकारी स्वयं जाँचें।" data-en="Medico does not verify providers or availability; check details with the provider.">Medico does not verify providers or availability; check details with the provider.</p></div>
+<div class="card panel" id="p-log" hidden=""><div class="row" style="justify-content:space-between"><b data-hi="गतिविधि इतिहास" data-en="Activity history">Activity history</b><button id="clr" data-hi="साफ़ करें" data-en="Clear">Clear</button></div><div id="loglist"><p class="mut">No activity yet.</p></div><div class="note" data-hi="संदेश आपके डिवाइस पर तैयार होते हैं; डिलीवरी की पुष्टि नहीं हो सकती।" data-en="Messages are prepared on your device; delivery cannot be confirmed.">Messages are prepared on your device; delivery cannot be confirmed.</div></div>
+</div></section>
+<section id="safety"><div class="w"><h2 class="s" data-hi="सुरक्षा और गोपनीयता" data-en="Safety and privacy">Safety and privacy</h2>
+<div class="grid"><div class="card"><h3 data-hi="कोई मेडिकल सलाह नहीं" data-en="No medical advice">No medical advice</h3><p data-hi="मेडिको खुराक कभी सुझाता या बदलता नहीं। केवल आपकी prescription दोहराता है।" data-en="Medico never suggests or changes doses. It only repeats what is on your prescription.">Medico never suggests or changes doses. It only repeats what is on your prescription.</p></div>
+<div class="card"><h3 data-hi="आपातकाल" data-en="Emergencies">Emergencies</h3><p data-hi="गंभीर स्थिति में सीधे 112 पर कॉल करें। इस ऐप का इंतज़ार न करें।" data-en="In a genuine emergency call 112 directly. Do not wait for this app.">In a genuine emergency call 112 directly. Do not wait for this app.</p></div>
+<div class="card"><h3 data-hi="आपका नियंत्रण" data-en="You stay in control">You stay in control</h3><p data-hi="सहमति कभी भी रद्द करें और सारा डेटा हटाएँ।" data-en="Revoke consent or delete all data at any time.">Revoke consent or delete all data at any time.</p></div></div></div></section>
+<section id="faq"><div class="w"><h2 class="s" data-hi="अक्सर पूछे जाने वाले प्रश्न" data-en="Frequently asked questions">Frequently asked questions</h2><p class="sub" data-hi="आपके सामान्य सवालों के जवाब।" data-en="Quick answers to common questions.">Quick answers to common questions.</p>
+<details><summary data-hi="क्या देखभालकर्ता को अपने आप संदेश जाता है?" data-en="Is my caregiver contacted automatically?">Is my caregiver contacted automatically?</summary><p data-hi="नहीं। आपकी सहमति होने पर ही संदेश तैयार होता है और भेजना आप खुद दबाते हैं।" data-en="No. A message is prepared only if you gave consent, and you press send yourself.">No. A message is prepared only if you gave consent, and you press send yourself.</p></details>
+<details><summary data-hi="क्या Medico खुराक सुझाता है?" data-en="Does Medico suggest doses?">Does Medico suggest doses?</summary><p data-hi="कभी नहीं। यह सिर्फ़ वही दोहराता है जो आपकी prescription पर लिखा है।" data-en="Never. It only repeats what is written on your prescription.">Never. It only repeats what is written on your prescription.</p></details>
+<details><summary data-hi="हिंदी आवाज़ क्यों नहीं सुनाई दे रही?" data-en="Why can't I hear the Hindi voice?">Why can't I hear the Hindi voice?</summary><p data-hi="आपके डिवाइस में हिंदी text-to-speech आवाज़ इंस्टॉल होनी चाहिए। सिस्टम सेटिंग्स में जोड़ें और Voice &amp; settings में टेस्ट करें।" data-en="Your device needs a Hindi text-to-speech voice installed. Add one in system settings, then test it under Voice &amp;amp; settings.">Your device needs a Hindi text-to-speech voice installed. Add one in system settings, then test it under Voice &amp; settings.</p></details>
+<details><summary data-hi="क्या ऐप बंद होने पर रिमाइंडर आएँगे?" data-en="Do reminders work when the page is closed?">Do reminders work when the page is closed?</summary><p data-hi="नहीं। आवाज़ रिमाइंडर तभी काम करते हैं जब यह पेज ब्राउज़र में खुला हो।" data-en="No. Voice reminders work while this page is open in your browser.">No. Voice reminders work while this page is open in your browser.</p></details></div></section>
+<div class="w"><div class="cta"><h2 data-hi="अपनी हर दवा समय पर लें" data-en="Take every dose on time">Take every dose on time</h2><p data-hi="हिंदी या अंग्रेज़ी में, अपनी भाषा में याद दिलाए जाएँ।" data-en="Get reminded in the language you prefer.">Get reminded in the language you prefer.</p><a class="btn" href="file:///Users/anujsomani/Downloads/Medico%20-%20Medicine%20reminders%20in%20your%20language%20(1).html#app" data-hi="अभी शुरू करें" data-en="Get started now">Get started now</a></div></div>
+</main>
+<footer><div class="w"><b>Medico</b> · <span data-hi="यह कोई मेडिकल डिवाइस नहीं है और डॉक्टर या फार्मासिस्ट की सलाह की जगह नहीं लेता।" data-en="Not a medical device. It does not replace advice from your doctor or pharmacist.">Not a medical device. It does not replace advice from your doctor or pharmacist.</span><p class="credit">Build by Bosscoder School Of Technology Student's.</p></div></footer>
+<a class="sos" href="tel:112" aria-label="Emergency call 112">SOS</a>
+<div id="modal" role="dialog" aria-modal="true"><div class="box" id="mbox"></div></div>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const K='medico.v2',D={lang:'en',voice:'both',name:'',meds:[],events:[],cg:{name:'',phone:'',consent:false},grace:5,snooze:10};
+let S=(()=>{try{return Object.assign({},D,JSON.parse(localStorage.getItem(K)||'{}'))}catch{return{...D}}})();
+const save=()=>{try{localStorage.setItem(K,JSON.stringify(S))}catch{}};
+const uid=()=>crypto.randomUUID?crypto.randomUUID():String(Date.now()+Math.random());
+const pad=n=>String(n).padStart(2,'0'),dk=(d=new Date())=>`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+const mins=t=>{const[a,b]=t.split(':').map(Number);return a*60+b},nowM=d=>d.getHours()*60+d.getMinutes();
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const T=(en,hi)=>S.lang==='hi'?hi:en,ph=v=>String(v).replace(/[^\d+]/g,'');
+/* ---- voice: English and Hindi ---- */
+const MSG={en:n=>`Medicine reminder. It is time to take ${n}. Please follow the instructions on your prescription. Have you taken your medicine?`,
+hi:n=>`दवा का रिमाइंडर। ${n} लेने का समय हो गया है। कृपया अपने प्रिस्क्रिप्शन पर लिखे निर्देशों का पालन करें। क्या आपने दवा ले ली है?`};
+const LC={en:'en-IN',hi:'hi-IN'};
+function voiceFor(l){const v=speechSynthesis.getVoices(),c=LC[l].toLowerCase();return v.find(x=>x.lang.replace('_','-').toLowerCase()===c)||v.find(x=>x.lang.toLowerCase().startsWith(l))||null}
+function speak(name,mode=S.voice){
+ try{speechSynthesis.cancel();
+  const order=mode==='both'?(S.lang==='hi'?['hi','en']:['en','hi']):[mode];
+  order.forEach(l=>{const u=new SpeechSynthesisUtterance(MSG[l](name));u.lang=LC[l];const v=voiceFor(l);if(v)u.voice=v;u.rate=.9;speechSynthesis.speak(u)});
+ }catch{}
+ voiceStatus();
+}
+function voiceStatus(){try{const m=[];if(!voiceFor('hi'))m.push(T('No Hindi voice found on this device. Install a Hindi text-to-speech voice in your system settings.','इस डिवाइस पर हिंदी आवाज़ नहीं मिली। सिस्टम सेटिंग्स में हिंदी text-to-speech आवाज़ इंस्टॉल करें।'));if(!voiceFor('en'))m.push(T('No English voice found.','अंग्रेज़ी आवाज़ नहीं मिली।'));$('#vstat').textContent=m.join(' ')||T('Both voices are available.','दोनों आवाज़ें उपलब्ध हैं।')}catch{}}
+try{speechSynthesis.onvoiceschanged=voiceStatus}catch{}
+/* ---- escalation ---- */
+const evs=(m,d=new Date())=>S.events.filter(e=>e.medId===m.id&&e.day===dk(d));
+function status(m,now){const t=evs(m,now).map(e=>e.type);return t.includes('taken')?'taken':t.includes('missed')?'missed':nowM(now)>=mins(m.time)?'due':'upcoming'}
+function step(m,now){const ev=evs(m,now),has=t=>ev.some(e=>e.type===t);
+ if(has('taken')||has('missed')||nowM(now)<mins(m.time))return null;
+ if(!has('reminder'))return nowM(now)-mins(m.time)>180?'missed':'reminder';
+ const sn=ev.filter(e=>e.type==='snooze').map(e=>new Date(e.until)).sort((a,b)=>b-a)[0];if(sn&&now<sn)return null;
+ const base=Math.max(...ev.filter(e=>['reminder','followup','snooze'].includes(e.type)).map(e=>new Date(e.ts)));
+ if(now-base<S.grace*60000)return null;if(!has('followup'))return'followup';if(has('cgprompt'))return null;
+ return S.cg.consent&&S.cg.phone?'caregiver':'missed'}
+function add(type,m,x={}){S.events.unshift({id:uid(),ts:new Date().toISOString(),day:dk(),medId:m.id,medName:m.name,type,...x});save()}
+/* ---- modal ---- */
+let busy=false;
+function open(h){$('#mbox').innerHTML=h;$('#modal').classList.add('show');busy=true;const b=$('#mbox button,#mbox a');b&&b.focus()}
+function close(){$('#modal').classList.remove('show');busy=false;try{speechSynthesis.cancel()}catch{}render()}
+function ring(m){open(`<p class="mut">${m.time}</p><div class="big">${esc(m.name)}</div><p>${esc(m.dose)}</p><p>${esc(MSG[S.lang==='hi'?'hi':'en']('').split('.')[0])}.</p>
+<button class="pri" data-r="taken" data-id="${m.id}">${T('Taken','ले ली')}</button><button data-r="later" data-id="${m.id}">${T('Remind me later','बाद में याद दिलाएँ')}</button><button class="dg" data-r="help" data-id="${m.id}">${T('I need help','मुझे मदद चाहिए')}</button>`);
+ speak(m.name);try{if(Notification.permission==='granted'&&document.hidden)new Notification('Medico',{body:m.name})}catch{}}
+function ringCg(m){const c=S.cg,who=S.name||T('The patient','मरीज़');
+ const body=encodeURIComponent(S.lang==='hi'?`Medico: ${who} ने ${m.time} की दवा के रिमाइंडर का जवाब नहीं दिया। कृपया संपर्क करें। ज़रूरी नहीं कि यह आपातकाल हो।`:`Medico: ${who} has not responded to the ${m.time} medicine reminder. Please check in. This is not necessarily an emergency.`);
+ open(`<div class="big">${T('No response','कोई जवाब नहीं')}</div><p>${T('Prepare a message to','संदेश तैयार करें:')} ${esc(c.name||T('your caregiver','देखभालकर्ता'))}? ${T('You press send.','भेजना आप खुद दबाएँगे।')}</p>
+<a class="btn pri" data-r="cgopen" data-id="${m.id}" href="sms:${esc(ph(c.phone))}?body=${body}">${T('Open message','संदेश खोलें')}</a><button data-r="x">${T('Dismiss','बंद करें')}</button>`)}
+function tick(){if(busy)return;const now=new Date();
+ for(const m of S.meds){if(m.demo)continue;const s=step(m,now);if(!s)continue;
+  if(s==='reminder'||s==='followup'){add(s,m);ring(m);return}
+  if(s==='caregiver'){add('cgprompt',m);add('missed',m);ringCg(m);return}
+  if(s==='missed')add('missed',m)}
+ if(!busy)renderMeds()}
+/* ---- render ---- */
+const LB={reminder:['Reminder spoken and shown','रिमाइंडर बोला और दिखाया गया'],followup:['Follow-up reminder','फॉलो-अप रिमाइंडर'],snooze:['Snoozed','बाद के लिए टाला'],taken:['Marked as taken','ले ली दर्ज'],missed:['Marked as missed','छूटी दर्ज'],help:['Help requested','मदद माँगी गई'],cgprompt:['Caregiver message prepared','देखभालकर्ता संदेश तैयार'],cgopen:['Message app opened (delivery not confirmed)','मैसेज ऐप खुला (डिलीवरी की पुष्टि नहीं)'],call_sim:['Phone call: unanswered (simulated, no real call)','फ़ोन कॉल: जवाब नहीं (सिम्युलेटेड)'],cg_sim:['Caregiver notified (simulated, nothing sent)','देखभालकर्ता को सूचना (सिम्युलेटेड)']};
+function renderMeds(){const now=new Date(),l=[...S.meds].sort((a,b)=>a.time.localeCompare(b.time)),c={taken:0,pending:0,missed:0};
+ l.forEach(m=>{const s=status(m,now);s==='taken'?c.taken++:s==='missed'?c.missed++:c.pending++});
+ $('#s1').textContent=c.taken;$('#s2').textContent=c.pending;$('#s3').textContent=c.missed;
+ $('#medlist').innerHTML=l.length?l.map(m=>{const s=status(m,now);return`<div class="item"><div><b>${esc(m.name)}</b> <span class="mut">· ${m.time}</span><br><span class="mut">${esc(m.dose)}</span></div><div class="row"><span class="pill ${s==='taken'?'ok':s==='missed'?'bad':s==='due'?'wn':''}">${T(s,{taken:'ले ली',missed:'छूटी',due:'अभी लेनी है',upcoming:'आने वाली'}[s])}</span><button data-del="${m.id}">${T('Delete','हटाएँ')}</button></div></div>`}).join(''):`<p class="mut">${T('No medicines yet.','अभी कोई दवा नहीं।')}</p>`}
+function renderLog(){$('#loglist').innerHTML=S.events.length?S.events.map(e=>`<div class="item"><div><b>${esc(LB[e.type]?T(...LB[e.type]):e.type)}</b>${e.sim?` <span class="pill wn">${T('Simulated','सिम्युलेटेड')}</span>`:''}<br><span class="mut">${esc(e.medName||'')}</span></div><span class="mut">${new Date(e.ts).toLocaleString(S.lang==='hi'?'hi-IN':[],{dateStyle:'medium',timeStyle:'short'})}</span></div>`).join(''):`<p class="mut">${T('No activity yet.','अभी कोई गतिविधि नहीं।')}</p>`}
+const CARE=[['Hospitals','अस्पताल','hospitals'],['Clinics','क्लिनिक','clinics'],['Pharmacies','दवा की दुकानें','pharmacies'],['Diagnostic labs','जाँच प्रयोगशालाएँ','diagnostic labs'],['Ambulance','एम्बुलेंस','ambulance service']];
+const TABS=[['meds','Medicines','दवाइयाँ'],['cg','Caregiver','देखभालकर्ता'],['voice','Voice & settings','आवाज़ और सेटिंग्स'],['care','Find care','देखभाल खोजें'],['log','Activity','गतिविधि']];
+let tab='meds';
+function render(){
+ $$('[data-hi]').forEach(e=>{if(e.dataset.en===undefined)e.dataset.en=e.innerHTML;e.innerHTML=S.lang==='hi'?e.dataset.hi:e.dataset.en});
+ document.documentElement.lang=S.lang;$('#lang').value=S.lang;
+ $('#tabs').innerHTML=TABS.map(([k,a,b])=>`<button role="tab" data-tab="${k}" aria-selected="${tab===k}">${T(a,b)}</button>`).join('');
+ TABS.forEach(([k])=>$('#p-'+k).hidden=tab!==k);
+ $('#carelist').innerHTML=CARE.map(([a,b,q])=>`<div><b>${T(a,b)}</b><div class="row" style="margin-top:8px"><a class="btn pri" target="_blank" rel="noopener" href="https://www.google.com/maps/search/${encodeURIComponent(q+' near me')}">Google Maps</a><a class="btn" target="_blank" rel="noopener" href="https://www.openstreetmap.org/search?query=${encodeURIComponent(q)}">OSM</a></div></div>`).join('');
+ $('#vm').value=S.voice;$('#sn').value=S.name;$('#sg').value=S.grace;$('#ss').value=S.snooze;$('#cn').value=S.cg.name;$('#cp').value=S.cg.phone;$('#cc').checked=S.cg.consent;
+ $('#te').textContent=T('🔊 Test English','🔊 अंग्रेज़ी सुनें');$('#th').textContent=T('🔊 Test Hindi','🔊 हिन्दी सुनें');
+ renderMeds();renderLog();voiceStatus()}
+/* ---- events ---- */
+document.addEventListener('click',e=>{const b=e.target.closest('button,a');if(!b)return;const d=b.dataset;
+ if(d.tab){tab=d.tab;render();return}
+ if(d.del){S.meds=S.meds.filter(x=>x.id!==d.del);save();render();return}
+ if(d.r){const m=S.meds.find(x=>x.id===d.id);
+  if(d.r==='taken'&&m){add('taken',m);close()}
+  else if(d.r==='later'&&m){add('snooze',m,{until:new Date(Date.now()+S.snooze*60000).toISOString()});close()}
+  else if(d.r==='help'&&m){add('help',m);open(`<div class="big">${T('Need urgent help?','तुरंत मदद चाहिए?')}</div><p>${T('Call emergency services directly.','सीधे आपातकालीन सेवा को कॉल करें।')}</p><a class="btn dg" href="tel:112">${T('Call 112','112 पर कॉल करें')}</a><button data-r="x">${T('Close','बंद करें')}</button>`)}
+  else if(d.r==='cgopen'&&m){add('cgopen',m);setTimeout(close,300)}else close();return}
+ const id=b.id;
+ if(id==='rev'){S.cg.consent=false;save();render()}
+ if(id==='te')speak(S.name||'Metformin','en');if(id==='th')speak(S.name||'Metformin','hi');
+ if(id==='clr'&&confirm(T('Clear the activity history?','गतिविधि इतिहास साफ़ करें?'))){S.events=[];save();render()}
+ if(id==='wipe'&&confirm(T('Delete all data from this browser?','इस ब्राउज़र से सारा डेटा हटाएँ?'))){S={...D,meds:[],events:[]};save();render()}
+ if(id==='exp'){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(S,null,2)],{type:'application/json'}));a.download='medico-data.json';a.click()}
+ });
+document.addEventListener('change',e=>{if(e.target.id==='lang'){S.lang=e.target.value;save();render()}});
+document.addEventListener('submit',e=>{e.preventDefault();const v=i=>$('#'+i).value.trim();
+ if(e.target.id==='mf'){if(!v('mn')||!v('md')||!v('mt')){$('#merr').textContent=T('Enter name, instructions and time exactly as on the prescription. If unsure, ask your pharmacist or doctor.','नाम, निर्देश और समय वैसे ही भरें जैसे prescription पर हैं। अस्पष्ट हो तो फार्मासिस्ट या डॉक्टर से पूछें।');return}
+  S.meds.push({id:uid(),name:v('mn'),dose:v('md'),time:v('mt')});save();e.target.reset();$('#merr').textContent='';render()}
+ else if(e.target.id==='cf'){const p=ph(v('cp')),c=$('#cc').checked;if(c&&p.replace(/\D/g,'').length<7){$('#cerr').textContent=T('Enter a valid mobile number.','सही मोबाइल नंबर भरें।');return}
+  $('#cerr').textContent='';S.cg={name:v('cn'),phone:p,consent:c};save();render()}
+ else if(e.target.id==='vf'){S.voice=$('#vm').value;S.name=v('sn');S.grace=Math.min(60,Math.max(1,+v('sg')||5));S.snooze=Math.min(120,Math.max(1,+v('ss')||10));save();render()}});
+render();tick();setInterval(tick,15000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)tick()});
+</script>
+</body></html>
